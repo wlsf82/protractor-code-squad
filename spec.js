@@ -18,7 +18,7 @@ describe ('Home', function () {
         expect(allH3Elements.getText()).toEqual(['Pages', 'Panels', 'Navigations', 'Layouts', 'Contexts', 'Rules']);
     });
 
-    // it ('menu items' , function () {
+    // it ('menu items', function () {
     //     var mainMenu = element(by.css('.navbar-nav'));
     //     var menuItems = mainMenu.all(by.css('.ng-binding'));
     //     expect(menuItems.getText()).toEqual(['A Page', 'Another Page', 'Blog']);
