@@ -4,7 +4,7 @@
 
 exports.config = {
 	seleniumAddress: 'http://localhost:4444/wd/hub',
-	specs: ['spec.js'],
+	specs: ['spec.js', 'signin.spec.js', 'create.account.spec.js'],
 	// capabilities: {
 	// 	browserName: 'chrome'
 	// },
@@ -16,5 +16,6 @@ exports.config = {
 	// 		browserName: 'firefox'
 	// 	}
 	// ]
-	baseUrl: 'http://demo.choko.org/'
+	baseUrl: 'http://demo.choko.org/',
+	// framework: 'jasmine2'
 }
