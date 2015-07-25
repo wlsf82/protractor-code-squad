@@ -4,7 +4,7 @@
 
 describe ('Choko demo', function () {
 	it ('title', function () {
-		browser.driver.get('http://demo.choko.org/');
+		browser.get('/')
 		var title = element(by.css('h1'));
 		expect(title.getText()).toEqual('Demo application');
 	});
