@@ -18,6 +18,11 @@ describe ('Home', function () {
         expect(allH3Elements.getText()).toEqual(['Pages', 'Panels', 'Navigations', 'Layouts', 'Contexts', 'Rules']);
     });
 
+    it ('count h3', function () {
+        var allH3Elements = element.all(by.css('h3'));
+        expect(allH3Elements.count()).toBe(6);
+    });
+
     // it ('menu items', function () {
     //     var mainMenu = element(by.css('.navbar-nav'));
     //     var menuItems = mainMenu.all(by.css('.ng-binding'));
