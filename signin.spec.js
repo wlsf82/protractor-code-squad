@@ -13,7 +13,7 @@ describe ('Sign in', function () {
 		helper.verifyTitle('Sign in');
 	});
 
-	it ('try to login with a invalid user and password', function () {
+	it ('try to login with an invalid user and password', function () {
 		var usernameField = $('#element-sign-in-username');
 		var passwordField = $('#element-sign-in-password');
 		var signinButton = $('#element-sign-in-submit');
