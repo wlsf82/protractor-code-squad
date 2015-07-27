@@ -24,4 +24,10 @@ describe ('Sign in', function () {
 
 		expect(element(by.repeater('error in errors')).getText()).toEqual('Invalid username or password.');
 	});
+
+	it ('try to login without filling any field', function () {
+		var signinButton = $('#element-sign-in-submit');
+		signinButton.click();
+		expect(element(by.repeater('error in errors')).getText()).toEqual('Please provide an username and a password.');
+	});
 });
