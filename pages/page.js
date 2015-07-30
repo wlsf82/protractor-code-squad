@@ -1,3 +1,7 @@
+/**
+* @file page.js
+*/
+
 var Page = function () {
 
 	this.mainElements = {
