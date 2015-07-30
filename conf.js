@@ -10,7 +10,7 @@ exports.config = {
 	// seleniumAddress: 'http://ondemand.saucelabs.com:80/wd/hub',
 	// Browserstack selenium info:
 	// seleniumAddress: 'http://hub.browserstack.com/wd/hub',
-	specs: ['spec.js', 'signin.spec.js', 'create.account.spec.js'],
+	specs: ['spec.js', 'signin.spec.js', 'create.account.spec.js', 'page.spec.js'],
 	capabilities: {
 		browserName: 'chrome',
 		// Saucelabs credentials:
