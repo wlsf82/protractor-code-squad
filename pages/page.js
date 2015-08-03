@@ -1,7 +1,11 @@
+/**
+* @file page.js
+*/
+
 var Page = function () {
 
 	this.mainElements = {
-		panelTitle: element(by.css('h3')),
+		panelTitle: element(by.css('h3.panel-title')),
 		panelDescription: element(by.css('.panel-body')),
 		title: element(by.css('h1')),
 		subTitle: element(by.css('.lead')),
