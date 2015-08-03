@@ -4,7 +4,7 @@
 
 var Page = require('./pages/page');
 
-ddescribe ('Page', function () {
+describe ('Page', function () {
 	it ('verify main elements presence', function () {
 		Page.get('a-page');
 		Page.checkMainElementsPresence();
