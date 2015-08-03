@@ -3,10 +3,11 @@
 */
 
 var helper = require('./helper');
+var HomePage = require('./pages/home.page');
 
 describe ('Home', function () {
     beforeEach (function () {
-        browser.get('/');
+        HomePage.get();
     });
 
 	it ('title', function () {
@@ -14,13 +15,11 @@ describe ('Home', function () {
 	});
 
     it ('h3\'s', function () {
-        var allH3Elements = element.all(by.css('h3'));
-        expect(allH3Elements.getText()).toEqual(['Pages', 'Panels', 'Navigations', 'Layouts', 'Contexts', 'Rules']);
+        HomePage.verifyAllH3Elements();
     });
 
     it ('count h3', function () {
-        var allH3Elements = element.all(by.css('h3'));
-        expect(allH3Elements.count()).toBe(6);
+        HomePage.countAllH3Elements(6);
     });
 
     // it ('menu items', function () {
@@ -30,7 +29,6 @@ describe ('Home', function () {
     // });
 
     it ('menu items', function () {
-        var menuItems = element.all(by.css('.navbar-nav .ng-binding'));
-        expect(menuItems.getText()).toEqual(['A Page', 'Another Page', 'Blog']);
+        HomePage.verifyMenuItems();
     });
 });
