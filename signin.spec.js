@@ -3,10 +3,11 @@
 */
 
 var helper = require('./helper');
+var SigninPage = require('./pages/signin.page');
 
 describe ('Sign in', function () {
     beforeEach (function () {
-        browser.get('sign-in');
+        SigninPage.get();
     });
 
 	it ('title', function () {
@@ -14,20 +15,12 @@ describe ('Sign in', function () {
 	});
 
 	it ('try to login with a invalid user and password', function () {
-		var usernameField = $('#element-sign-in-username');
-		var passwordField = $('#element-sign-in-password');
-		var signinButton = $('#element-sign-in-submit');
-
-		usernameField.sendKeys('invalid');
-		passwordField.sendKeys('invalid');
-		signinButton.click();
-
+		SigninPage.signin('invalid', 'invalid');
 		expect(element(by.repeater('error in errors')).getText()).toEqual('Invalid username or password.');
 	});
 
 	it ('try to login without filling any field', function () {
-		var signinButton = $('#element-sign-in-submit');
-		signinButton.click();
+		SigninPage.signin('', '');
 		expect(element(by.repeater('error in errors')).getText()).toEqual('Please provide an username and a password.');
 	});
 });
