@@ -22,6 +22,7 @@ describe ('Blog', function () {
   // When the true is that we've a masked bug.
   it ('false positive test', function () {
     expect(BlogPage.title.getText()).toContain('Blog posts');
+    // The below line can be used to make this test a positive negative.
     // expect(BlogPage.title.getText()).toEqual('Blog posts');
   });
 

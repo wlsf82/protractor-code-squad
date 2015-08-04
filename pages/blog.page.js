@@ -15,6 +15,7 @@ var BlogPage = function () {
   this.countPostsOnPanel = function (expectedNumberOfLines) {
     var allPanelsLines = element.all(by.css('.panel [ng-repeat="item in items"]'));
     expect(allPanelsLines.count()).toBe(expectedNumberOfLines);
+    // The below line can be used to make the first blog test a positive positive
     // expect(allPanelsLines.count()).toBe(expectedNumberOfLines + 1);
   };
 
