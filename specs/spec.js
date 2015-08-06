@@ -2,8 +2,8 @@
 * @file spec.js
 */
 
-var helper = require('./helper');
-var HomePage = require('./pages/home.page');
+var helper = require('../helper');
+var HomePage = require('../pages/home.page');
 
 describe ('Home', function () {
     beforeEach (function () {

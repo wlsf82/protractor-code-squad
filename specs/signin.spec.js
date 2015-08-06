@@ -2,8 +2,8 @@
 * @file signin.spec.js
 */
 
-var helper = require('./helper');
-var SigninPage = require('./pages/signin.page');
+var helper = require('../helper');
+var SigninPage = require('../pages/signin.page');
 
 describe ('Sign in', function () {
     beforeEach (function () {

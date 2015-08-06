@@ -2,7 +2,7 @@
 * @file page.spec.js
 */
 
-var Page = require('./pages/page');
+var Page = require('../pages/page');
 
 describe ('Page', function () {
 	it ('verify main elements presence', function () {
