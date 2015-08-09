@@ -4,6 +4,9 @@
 
 var HomePage = function () {
 
+	this.menuButton = element(by.css('.navbar-header button'));
+	this.signinMenuItem = element(by.cssContainingText('.navbar a', 'Sign in'));
+
 	this.get = function () {
 		browser.get('/');
 	};
