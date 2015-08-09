@@ -24,22 +24,23 @@ describe ('Create account', function () {
 		expect(element(by.repeater('error in errors')).getText()).toEqual('This username is not available, please choose another one.');
 	});
 
-	/**
-	* The three below tests will be skipped because we have no control to the users in the sample app
-	* And because we are still not dealing with the password not match situation.
-	*/
+  it ('password not match', function () {
+		CreateAccountPage.add('walmyr12345@test.com', 'walmyr12345', 'senhasecreta', 'senhaerrada');
+		expect(element(by.repeater('error in errors')).getText()).toEqual('Passwords must match.');
+	});
 
-	xit ('invalid email', function () {
-		CreateAccountPage.add('walmyr', 'walmyr3', 'senhasecreta');
+  it ('invalid email', function () {
+		CreateAccountPage.add('invalidEmail', 'walmyr3', 'senhasecreta');
 		expect(element(by.repeater('error in errors')).getText()).toEqual('Email is required.');
 	});
 
-	xit ('password not match', function () {
-		CreateAccountPage.add('walmyr@test.com', 'walmyr1', 'senhasecreta', 'senhaerrada');
-		expect(element(by.repeater('error in errors')).getText()).toEqual('Please provide an username and a password.');
-	});
+	/**
+	* The below test will be skipped because we have no control to the users in the sample app
+  * I mean, once this user is added, we will not be able to delete it, and then, next time this test run, it will fail.
+  * In a real project, where you have access to the database, or even the administrative UI, you should delete it, automatically.
+	*/
 
 	xit ('successfully account creation', function () {
-		CreateAccountPage.add('walmyr@test.com', 'walmyr2', 'senhasecreta');
+		CreateAccountPage.add('walmy1234r@test.com', 'walmyr1234', 'senhasecreta');
 	});
 });

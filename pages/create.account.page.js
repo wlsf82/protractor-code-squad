@@ -14,14 +14,18 @@ var CreateAccountPage = function () {
   	browser.get('create-account');
   };
 
-  this.add = function (email, username, password) {
+  this.add = function (email, username, password, confirmPassword) {
   	this.emailField.sendKeys(email);
   	this.usernameField.sendKeys(username);
-  	this.passwordField.sendKeys(password);
-  	this.confirmPasswordField.sendKeys(password);
+		this.passwordField.sendKeys(password);
+		if (typeof(confirmPassword) != 'undefined') {
+  		this.confirmPasswordField.sendKeys(confirmPassword);
+		} else {
+  		this.confirmPasswordField.sendKeys(password);
+		}
   	this.createAccountButton.click();
-  }
+  };
 
-};
+}
 
 module.exports = new CreateAccountPage();
