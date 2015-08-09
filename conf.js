@@ -12,7 +12,7 @@ exports.config = {
 	// seleniumAddress: 'http://hub.browserstack.com/wd/hub',
 	specs: ['./specs/spec.js', './specs/signin.spec.js', './specs/create.account.spec.js', './specs/page.spec.js', './specs/blog.spec.js', './specs/mobile.spec.js'],
 	capabilities: {
-		browserName: 'chrome',
+		browserName: 'firefox',
 		// Saucelabs credentials:
 		// username: 'your saucelabs username here',
 		// accessKey: 'your saucelabs accesskey here',

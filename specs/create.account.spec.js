@@ -24,12 +24,12 @@ describe ('Create account', function () {
 		expect(element(by.repeater('error in errors')).getText()).toEqual('This username is not available, please choose another one.');
 	});
 
-  it ('password not match', function () {
+  	it ('password not match', function () {
 		CreateAccountPage.add('walmyr12345@test.com', 'walmyr12345', 'senhasecreta', 'senhaerrada');
 		expect(element(by.repeater('error in errors')).getText()).toEqual('Passwords must match.');
 	});
 
-  it ('invalid email', function () {
+  	it ('invalid email', function () {
 		CreateAccountPage.add('invalidEmail', 'walmyr3', 'senhasecreta');
 		expect(element(by.repeater('error in errors')).getText()).toEqual('Email is required.');
 	});
