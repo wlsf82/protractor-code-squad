@@ -2,8 +2,6 @@
 * @file blog.spec.js
 */
 
-// All the tests in this file will be skipped, since they make no much sense for the class-14.
-
 var BlogPage = require('../pages/blog.page');
 var helper = require('../helper');
 
