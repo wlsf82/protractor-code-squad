@@ -17,12 +17,12 @@ var CreateAccountPage = function () {
   	this.add = function (email, username, password, confirmPassword) {
   		this.emailField.sendKeys(email);
   		this.usernameField.sendKeys(username);
-		this.passwordField.sendKeys(password);
-		if (typeof(confirmPassword) != 'undefined') {
+		  this.passwordField.sendKeys(password);
+		  if (typeof(confirmPassword) != 'undefined') {
   			this.confirmPasswordField.sendKeys(confirmPassword);
-		} else {
+		  } else {
   			this.confirmPasswordField.sendKeys(password);
-		}
+		  }
   		this.createAccountButton.click();
   	};
 

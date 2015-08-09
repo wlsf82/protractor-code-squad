@@ -45,6 +45,7 @@ exports.config = {
 	// },
 
 	onPrepare: function () {
+		browser.driver.manage().window().maximize(),
 		jasmine.getEnv().addReporter(new HtmlReporter ({
 			baseDirectory: 'results'
 		}));
