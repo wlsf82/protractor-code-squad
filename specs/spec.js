@@ -8,6 +8,7 @@ var HomePage = require('../pages/home.page');
 describe ('Home', function () {
     beforeEach (function () {
         HomePage.get();
+        browser.driver.manage().window().maximize();
     });
 
 	it ('title', function () {
